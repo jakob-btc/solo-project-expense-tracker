@@ -1,0 +1,2 @@
+1. How do I get the linter to work properly? 
+Anything apart from .eslintrc.json needed?

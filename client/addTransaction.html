@@ -1,15 +1,74 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Let's log your expenses!</title>
+  <title>Your Expense Tracker</title>
 </head>
 <body>
-  Add Expense
+  <h2>Add An Expense</h2>
   <form method="POST" action='/add/expense'>
-    <input name="category" type="text" placeholder="category"></input>
-    <input name="amount" type="text" placeholder="amount"></input>
-    <input type='submit' value="login">
+    <label class="label" for="category">Category:</label>
+    <select class="box" name="category">
+      <option value="food">Food</option>
+      <option value="home">Home</option>
+      <option value="car">Car</option>
+      <option value="education">Education</option>
+      <option value="gear">Gear</option>
+      <option value="health">Health</option>
+      <option value="income">Income</option>
+    </select><br>
+    <label class="label" for="description">Description:</label>
+    <input class="box" name="description" type="text" placeholder="description"></input><br>
+    <label class="label" for="amount">Amount:</label>
+    <input class="box" name="amount" type="number" placeholder="amount in $"></input><br>
+    <label class="label" for="date">(Optional) Date:</label>
+    <input class="box" name="date" type="date" placeholder="date"></input><br>
+    <input class="submit-button" type='submit' value="Submit">
   </form>
-  <a href='./index.html'>Back to Home Page</a>
+  <a class="link" href='../'>Back to Home Page</a>
 </body>
+<style>
+  body {
+    background-color: rgb(22, 30, 41);
+    color: white;
+  }
+  .box {
+    background-color: rgb(212, 215, 221);
+    margin-left: 20px;
+  }
+
+  .label {
+    margin-top: 10px;
+    font-family: Arial;
+  }
+
+  .submit-button {
+    background-color: rgb(127, 131, 113);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 74px;
+    border-radius: 18px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.15s;
+  }
+
+  .submit-button:hover {
+    opacity: 0.7;
+  }
+
+  .link {
+    color: white;
+    transition: color 0.15s;
+  }
+
+  .link:hover {
+    color: rgb(131, 81, 81);
+  }
+
+  .link:active {
+    color: rgb(134, 4, 4);
+  }
+</style>
 </html>

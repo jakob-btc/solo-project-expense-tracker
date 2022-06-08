@@ -1,0 +1,29 @@
+{
+  "name": "solo-project-expense-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "export NODE_ENV=development; nodemon server/server.js",
+    "start": "export NODE_ENV=production; nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gandalf77/solo-project-expense-tracker"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gandalf77/solo-project-expense-tracker/issues"
+  },
+  "homepage": "https://github.com/gandalf77/solo-project-expense-tracker#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "mongoose": "4.4.1",
+    "nodemon": "^1.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.0"
+  }
+}

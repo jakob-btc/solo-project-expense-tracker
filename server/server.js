@@ -13,15 +13,20 @@ const mongoURI = process.env.NODE_ENV === 'development' ?
 mongoose.connect(mongoURI);
 
 app.use(express.json());
-// app.use(express.urlencoded());
+app.use(express.urlencoded());
+
+app.use('/client', express.static(path.resolve(__dirname, '../client')));
+
 
 // GET requests
+
+// SERVING UP HTML FILES
 
 // GET landing page 
 app.get(
   '/',
   (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'TO DO: add path to landing page'));
+    res.sendFile(path.resolve(__dirname, '../client/index.html'));
   }
 );
 
@@ -29,7 +34,7 @@ app.get(
 app.get(
   '/add/expense',
   (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'TO DO: add path to add expense page'));
+    res.sendFile(path.resolve(__dirname, '../client/addTransaction.html'));
   }
 );
 
@@ -37,7 +42,35 @@ app.get(
 app.get(
   '/added',
   (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'TO DO: add path to added page'));
+    res.sendFile(path.resolve(__dirname, '../client/added.html'));
+  }
+);
+
+app.get(
+  '/report',
+  (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/report.html'));
+  }
+);
+
+
+// QUERYING THE DATABASE
+
+// GET all expenses
+app.get(
+  '/report/expenses',
+  transactionController.getAllExpenses,
+  (req, res) => {
+    res.status(200).send({expenses: res.locals.allExpenses});
+  }
+);
+
+// GET all income
+app.get(
+  '/report/income',
+  transactionController.getAllIncome,
+  (req, res) => {
+    res.status(200).send({income: res.locals.allIncome});
   }
 );
 
@@ -48,9 +81,21 @@ app.post(
   '/add/expense',
   transactionController.addTransaction,
   (req, res) => {
-    res.redirect('/added')
+    // res.status(200).json(res.locals.createdTransaction);  
+    res.redirect('/added');
   }
 );
+
+// DELETE requests
+
+app.delete(
+  '/delete/all',
+  transactionController.deleteAll,
+  (req, res) => {
+    res.status(200).send(res.locals.newState)
+  }
+)
+
 
 // 404 handler
 app.use('*', (req, res) => {

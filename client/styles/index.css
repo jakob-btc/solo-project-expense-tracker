@@ -16,7 +16,8 @@ h1 {
 }
 
 .report-button,
-.expense-button {
+.expense-button,
+.adjustments-button {
   border-color: rgb(185, 185, 185);
   border-style: solid;
   border-width: 1px;
@@ -39,7 +40,8 @@ h1 {
 }
 
 .report-button:hover,
-.expense-button:hover {
+.expense-button:hover,
+.adjustments-button:hover {
   background-color:  rgb(69, 69, 69);
   color: rgb(241, 239, 239);
   border-color: rgb(69, 69, 69);

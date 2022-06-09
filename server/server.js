@@ -56,10 +56,9 @@ app.get(
 app.get(
   '/adjustments',
   (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/report-new.html'));
+    res.sendFile(path.resolve(__dirname, '../client/adjustments.html'));
   }
 );
-
 
 // QUERYING THE DATABASE
 
@@ -81,6 +80,17 @@ app.get(
   }
 );
 
+// GET all database entries
+app.get(
+  '/report/all',
+  transactionController.getAllEntries,
+  (req, res) => {
+    res.status(200).send({allEntries: res.locals.allEntries});
+  }
+);
+
+
+
 // POST requests
 
 // POST request for writing expense to database
@@ -95,11 +105,29 @@ app.post(
 
 // DELETE requests
 
+app.get(
+  '/delete/entry',
+  transactionController.deleteEntry,
+  (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/adjustments.html'));
+  }
+)
+
+
 app.delete(
   '/delete/all',
   transactionController.deleteAll,
   (req, res) => {
     res.status(200).send(res.locals.newState)
+  }
+)
+
+// PATCH requests
+
+app.get(
+  '/update/entry',
+  (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/update.html'));
   }
 )
 

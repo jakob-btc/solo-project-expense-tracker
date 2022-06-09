@@ -1,0 +1,100 @@
+body {
+  font-family: Cormorant, Arial;
+  background-color: rgb(241, 239, 239);
+  color: rgb(8, 8, 8);
+  width: 525px;
+}
+
+.page-title{
+  font-size: 20px;
+}
+
+.income-box,
+.expense-box,
+.payday-box {
+  font-size: 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.income-box {
+  background-color: rgb(189, 216, 195);
+}
+
+.expense-box {
+  background-color: rgb(243, 210, 210);
+}
+
+.payday-box {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: rgb(223, 228, 230);
+}
+
+.expense-box {
+  margin-top: 20px;
+}
+
+.income-total-text,
+.income-total-amount,
+.expense-total-text,
+.expense-total-amount {
+  font-weight: bold;
+}
+
+.income-total-amount,
+.expense-total-amount,
+.payday-total-amount {
+  text-align: right;
+  margin-right: 5px;
+}
+
+.payday-total-text,
+.payday-total-amount {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.income-subtotal-text,
+.income-subtotal-amount,
+.expense-subtotal-text,
+.expense-subtotal-amount,
+.payday-subtotal-text,
+.payday-subtotal-amount {
+  margin-left: 20px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.income-subtotal-amount,
+.expense-subtotal-amount,
+.payday-subtotal-amount {
+  font-style: normal;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.home-button {
+  border-color: rgb(185, 185, 185);
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(8, 8, 8);
+  border-radius: 6px;
+  cursor: pointer;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: background-color 0.15s, 
+    color 0.15s;
+  text-decoration: none;
+}
+
+.home-button:hover {
+  background-color:  rgb(69, 69, 69);
+  color: rgb(241, 239, 239);
+  border-color: rgb(69, 69, 69);
+}

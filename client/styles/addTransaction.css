@@ -1,0 +1,89 @@
+body {
+  font-family: Cormorant, Arial;
+  background-color: rgb(241, 239, 239);
+  color: rgb(8, 8, 8);
+}
+
+  h2 {
+    /* text-align: center; */
+    width: 250px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  ::placeholder {
+    color: rgb(8, 8, 8);
+  }
+
+  .box-category,
+  .box-description,
+  .box-amount,
+  .box-date {
+    width: 120px;
+    color: rgb(8, 8, 8);
+    border: rgb(201, 201, 201);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    font-family: Cormorant;
+    font-size: 13px;
+
+  }
+
+  .box-category {
+    margin-left: 43px;
+    background-color: white;
+  }
+
+  .box-description {
+    margin-left: 25px;
+  }
+
+  .box-amount {
+    margin-left: 47px;
+  }
+
+  .box-date {
+    margin-left: 71px;
+  }
+
+  .label {
+    margin-top: 5px;
+    font-size: 17px;
+  }
+
+  .home-button,
+  .submit-button {
+    border-color: rgb(185, 185, 185);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(8, 8, 8);
+    border-radius: 6px;
+    cursor: pointer;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: background-color 0.15s, 
+      color 0.15s;
+    text-decoration: none;
+  }
+  
+  .submit-button {
+    font-family: Cormorant;
+    font-size: 14px;
+    margin-top: 20px;
+    width: 94px;
+  }
+  
+  .home-button:hover,
+  .submit-button:hover {
+    background-color:   rgb(69, 69, 69);
+    color: rgb(241, 239, 239);
+    border-color:  rgb(69, 69, 69)
+  }
+

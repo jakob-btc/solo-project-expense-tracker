@@ -1,0 +1,48 @@
+body {
+  font-family: Cormorant, Arial;
+  background-color: rgb(241, 239, 239);
+  color: rgb(8, 8, 8)
+}
+
+a {
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+h1 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.report-button,
+.expense-button {
+  border-color: rgb(185, 185, 185);
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(8, 8, 8);
+  border-radius: 6px;
+  cursor: pointer;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: background-color 0.15s, 
+    color 0.15s;
+  text-decoration: none;
+  font-family: Cormorant;
+}
+
+.report-button {
+  padding-left: 18px;
+  padding-right: 18px
+}
+
+.report-button:hover,
+.expense-button:hover {
+  background-color:  rgb(69, 69, 69);
+  color: rgb(241, 239, 239);
+  border-color: rgb(69, 69, 69);
+}
+
+

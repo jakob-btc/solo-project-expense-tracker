@@ -53,6 +53,13 @@ app.get(
   }
 );
 
+app.get(
+  '/adjustments',
+  (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/report-new.html'));
+  }
+);
+
 
 // QUERYING THE DATABASE
 

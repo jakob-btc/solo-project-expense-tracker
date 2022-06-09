@@ -1,74 +1,35 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../client/styles/addTransaction.css"> 
   <title>Your Expense Tracker</title>
 </head>
 <body>
   <h2>Add An Expense</h2>
   <form method="POST" action='/add/expense'>
     <label class="label" for="category">Category:</label>
-    <select class="box" name="category">
+    <select class="box-category" name="category">
       <option value="food">Food</option>
       <option value="home">Home</option>
       <option value="car">Car</option>
       <option value="education">Education</option>
       <option value="gear">Gear</option>
       <option value="health">Health</option>
+      <option value="taxes">Taxes</option>
+      <option value="debt">Debt</option>
       <option value="income">Income</option>
     </select><br>
     <label class="label" for="description">Description:</label>
-    <input class="box" name="description" type="text" placeholder="description"></input><br>
+    <input class="box-description" name="description" type="text" placeholder="description"></input><br>
     <label class="label" for="amount">Amount:</label>
-    <input class="box" name="amount" type="number" placeholder="amount in $"></input><br>
-    <label class="label" for="date">(Optional) Date:</label>
-    <input class="box" name="date" type="date" placeholder="date"></input><br>
-    <input class="submit-button" type='submit' value="Submit">
+    <input class="box-amount" name="amount" type="number" placeholder="amount in $"></input><br>
+    <label class="label" for="date">Date:</label>
+    <input class="box-date" name="date" type="date" placeholder="date"></input><br>
+    <input class="submit-button" type='submit' value="Submit">  
   </form>
-  <a class="link" href='../'>Back to Home Page</a>
+  <a class="home-button" href='../'>Back Home</a>
 </body>
-<style>
-  body {
-    background-color: rgb(22, 30, 41);
-    color: white;
-  }
-  .box {
-    background-color: rgb(212, 215, 221);
-    margin-left: 20px;
-  }
-
-  .label {
-    margin-top: 10px;
-    font-family: Arial;
-  }
-
-  .submit-button {
-    background-color: rgb(127, 131, 113);
-    color: white;
-    border: none;
-    height: 36px;
-    width: 74px;
-    border-radius: 18px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: opacity 0.15s;
-  }
-
-  .submit-button:hover {
-    opacity: 0.7;
-  }
-
-  .link {
-    color: white;
-    transition: color 0.15s;
-  }
-
-  .link:hover {
-    color: rgb(131, 81, 81);
-  }
-
-  .link:active {
-    color: rgb(134, 4, 4);
-  }
-</style>
 </html>

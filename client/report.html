@@ -1,17 +1,51 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Your Expense Tracker</title>
-</head>
-<body>
-  <h2>Your Personal Income Statement</h2>
-    <ul id="report"></ul>
-    <script src="../client/scripts/report.js"></script>
-    <!-- <ul id="income"></ul>
-    <script src="../client/scripts/income.js"></script>
-    <ul id="expenses"></ul>
-    <script src="../client/scripts/expenses.js"></script> -->
-    <a href='../'>Back to Home Page</a>
+  <head>
+    <title>Income Statement Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../client/styles/report.css">
 
-</body>
+  </head>
+  <body>
+    <div class="page-title">
+      <h1>Your Personal Income Statement</h2>
+    </div>
+
+    <div class="income-box">
+      <div class="income-text-box">
+        <div class="income-total-text">Total Income</div>
+
+      </div>
+      <div class="income-amount-box">
+
+      </div>
+    </div>
+
+    <div class="expense-box">
+      <div class="expense-text-box">
+        <div class="expense-total-text">Total Expenses</div>
+
+      </div>
+      <div class="expense-amount-box">
+
+      </div>
+    </div>
+
+    <div class="payday-box">
+      <div class="payday-text-box">
+        <div class="payday-total-text">Payday</div>
+
+      </div>
+      <div class="payday-amount-box">
+
+      </div>
+    </div>
+
+    <a class="home-button" href='../'>Back Home</a>
+
+    <script src="../client/scripts/report.js"></script>
+
+  </body>
 </html>
